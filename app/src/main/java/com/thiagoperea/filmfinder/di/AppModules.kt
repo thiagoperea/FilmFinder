@@ -3,6 +3,7 @@ package com.thiagoperea.filmfinder.di
 import com.thiagoperea.filmfinder.data.remote.TmdbApi
 import com.thiagoperea.filmfinder.data.remote.callWithApiKey
 import com.thiagoperea.filmfinder.data.repository.MovieRepository
+import com.thiagoperea.filmfinder.ui.screens.moviedetails.MovieDetailsViewModel
 import com.thiagoperea.filmfinder.ui.screens.movielist.MovieListViewModel
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -39,4 +40,6 @@ val repositoryModule = module {
 val viewModelModule = module {
 
     viewModel { MovieListViewModel(get()) }
+
+    viewModel { MovieDetailsViewModel(get()) }
 }

@@ -15,9 +15,3 @@ sealed class MovieListState {
 
     data class Error(val errorMessage: String) : MovieListState()
 }
-
-sealed class MovieListEvent {
-
-    object Idle : MovieListEvent()
-
-}

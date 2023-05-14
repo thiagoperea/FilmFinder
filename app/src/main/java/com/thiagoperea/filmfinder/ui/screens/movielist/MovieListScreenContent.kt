@@ -39,17 +39,6 @@ fun MovieListScreenContent(
     val selectedCategoryText = stringResource(selectedCategory.stringRes)
     val selectedText = remember { mutableStateOf(selectedCategoryText) }
 
-    if (movieList.isEmpty()) {
-        return Column(
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            Text(
-                text = stringResource(R.string.no_movie_found)
-            )
-        }
-    }
-
     Column(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {

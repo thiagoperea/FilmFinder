@@ -10,7 +10,6 @@ import kotlinx.coroutines.launch
 class MovieListViewModel(val repository: MovieRepository) : ViewModel() {
 
     val screenState = mutableStateOf<MovieListState>(MovieListState.Loading)
-    val screenEvent = mutableStateOf<MovieListEvent>(MovieListEvent.Idle)
 
     lateinit var categoryList: List<MovieCategories>
     lateinit var selectedCategory: MovieCategories

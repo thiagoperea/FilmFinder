@@ -5,6 +5,6 @@
     <string name="now_playing">Em exibição</string>
     <string name="upcoming">Próximos lançamentos</string>
     <string name="latest">Lançamentos</string>
-    <string name="no_movie_found">Não encontramos nenhum filme :(</string>
+    <string name="no_data_found">Não encontramos nenhuma informação :(</string>
     <string name="category">Categorias</string>
 </resources>

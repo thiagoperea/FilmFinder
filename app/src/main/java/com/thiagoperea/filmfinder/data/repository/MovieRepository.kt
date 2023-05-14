@@ -18,4 +18,15 @@ class MovieRepository(val api: TmdbApi) {
         api.getMovieListByCategory(categoryUrl)
     }
 
+    suspend fun getMovieDetails(movieId: Long) = withContext(Dispatchers.IO) {
+        api.getMovieDetails(movieId)
+    }
+
+    suspend fun getMovieCastData(movieId: Long) = withContext(Dispatchers.IO) {
+        api.getMovieCast(movieId)
+    }
+
+    suspend fun getMovieVideoData(movieId: Long) = withContext(Dispatchers.IO) {
+        api.getMovieVideosData(movieId)
+    }
 }
