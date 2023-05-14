@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">FilmFinder</string>
+    <string name="top_rated">Melhores avaliações</string>
+    <string name="popular">Populares</string>
+    <string name="now_playing">Em exibição</string>
+    <string name="upcoming">Próximos lançamentos</string>
+    <string name="latest">Lançamentos</string>
 </resources>
