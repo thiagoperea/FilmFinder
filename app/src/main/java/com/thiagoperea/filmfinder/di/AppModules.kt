@@ -5,6 +5,7 @@ import com.thiagoperea.filmfinder.data.remote.callWithApiKey
 import com.thiagoperea.filmfinder.data.repository.MovieRepository
 import com.thiagoperea.filmfinder.ui.screens.movielist.MovieListViewModel
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 import retrofit2.Retrofit
@@ -15,11 +16,12 @@ val datasourceModule = module {
 
     single {
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://api.github.com/")
+            .baseUrl("https://api.themoviedb.org/3/")
             .client(
                 OkHttpClient()
                     .newBuilder()
                     .addInterceptor { it.callWithApiKey() }
+                    .addInterceptor(HttpLoggingInterceptor().apply { this.level = HttpLoggingInterceptor.Level.BODY })
                     .build()
             )
             .addConverterFactory(GsonConverterFactory.create())

@@ -8,7 +8,6 @@ import kotlinx.coroutines.withContext
 class MovieRepository(val api: TmdbApi) {
 
     fun getCategories() = listOf(
-        MovieCategories.LATEST,
         MovieCategories.NOW_PLAYING,
         MovieCategories.POPULAR,
         MovieCategories.TOP_RATED,

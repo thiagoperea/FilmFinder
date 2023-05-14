@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 data class MovieListResponse(
     val page: Int,
-    val results: List<MovieListItemResponse>,
+    val results: List<MovieListItemResponse>?,
     @SerializedName("total_pages") val totalPages: Int
 )
 
